@@ -3,10 +3,12 @@ import '../index.css'
 import { Link, useLocation } from 'react-router-dom'
 const Navbar = () => {
   const location = useLocation();
-  const shouldHideSignin = location.pathname === '/Login'
+  const isAboutPage = location.pathname === '/About';
+  const shouldHideSignin = location.pathname === '/Login';
+  const navbarBgColor = isAboutPage ? 'bg-yellow-300' : 'bg-pink-300';
   return (
     
-      <div className="navbar bg-pink-300">
+      <div className={`navbar ${navbarBgColor}  h-5`}>
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,10 +27,10 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 h-55 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 h-50 p-2 shadow">
          <li className='mb-3'><a className='text-2xl'>Feature</a></li>
       <li className='mb-3'><Link className='text-2xl' to='./News'>News</Link></li>
-      <li className='mb-3'><a className='text-2xl'>About Us</a></li>
+      <li className='mb-3'><Link className='text-2xl' to='/About'>About Us</Link></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-3xl">SolApex</a>
@@ -37,7 +39,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
       <li><a className='text-2xl'>Feature</a></li>
       <li><Link  className='text-2xl' to ='/News'>News</Link></li>
-      <li><a className='text-2xl'>About-Us</a></li>
+      <li><Link className='text-2xl' to='/About'>About-Us</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
