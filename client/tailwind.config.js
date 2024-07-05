@@ -5,8 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+  extend: {
+      spacing:{
+        '50': '5rem',
+      },
+      fontFamily: {
+        'lexend-exa' : ['"Lexend Exa"', 'sans-serif'],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
 }
 
