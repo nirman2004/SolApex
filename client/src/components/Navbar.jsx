@@ -5,8 +5,7 @@ const Navbar = () => {
   const location = useLocation();
   const shouldHideSignin = location.pathname === '/Login'
   return (
-    
-      <div className="navbar bg-pink-300">
+  <div className="navbar bg-pink-300">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,7 +34,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a className='text-2xl'>Feature</a></li>
+      <li><Link to='/Feature' className='text-2xl'>Feature</Link></li>
       <li><Link  className='text-2xl' to ='/News'>News</Link></li>
       <li><a className='text-2xl'>About-Us</a></li>
     </ul>
