@@ -20,7 +20,7 @@ const Home = () => {
           >
             Discover the power of solar
           </p>
-          <p className="text-3xl mt-6 mr-6 text-left ml-8 leading-10">
+          <p className="text-3xl mt-6 mr-6 text-left ml-8 leading-10 text-black">
             In rooftops high, where sunlight lies, <br />
             We harness beams from azure skies. A future bright, with every ray,
             <br />
