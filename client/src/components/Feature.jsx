@@ -50,7 +50,7 @@ const Feature = () => {
         <MapContainer 
           center={userLocation} 
           zoom={16} 
-          style={{ height: '500px', width: '100%' }}
+          style={{ height: '100vh', width: '50%' }}
         >
           <TileLayer url={tileLayerUrl} />
           <MapClickHandler />
@@ -59,7 +59,7 @@ const Feature = () => {
           )}
         </MapContainer>
       ) : (
-        <p>Loading map...</p>
+        <p className='h-screen w-full flex items-center justify-center text-2xl'>Loading map...</p>
       )}
     </div>
   )
