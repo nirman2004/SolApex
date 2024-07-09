@@ -6,7 +6,7 @@ const Feature = () => {
 
   const [positions, setPositions] = useState([]);
   const [userLocation, setUserLocation] = useState(null);
-  const [mapStyle, setMapStyle] = useState('satellite'); // Default location
+  const [mapStyle, setMapStyle] = useState('satellite'); 
 
   useEffect(() => {
     if (navigator.geolocation) {
